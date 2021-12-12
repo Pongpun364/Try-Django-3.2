@@ -10,6 +10,7 @@ services:
       - .env.prod
     volumes:
       - static_volume:/home/trydjango/web/staticfiles-cdn
+      - media_volume:/home/trydjango/web/mediafiles-cdn
     depends_on:
       - db
   db:
@@ -24,9 +25,11 @@ services:
       - 1337:80
     volumes:
       - static_volume:/home/trydjango/web/staticfiles-cdn
+      - media_volume:/home/trydjango/web/mediafiles-cdn
     depends_on:
       - web
 
 volumes:
   postgres_data:
   static_volume:
+  media_volume:
