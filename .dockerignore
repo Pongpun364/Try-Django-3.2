@@ -4,5 +4,7 @@ Lib/
 db.sqlite3
 Include/
 Scripts/
+staticfiles-cdn/
+mediafiles-cdn/
 
 
